@@ -727,7 +727,7 @@ image.Image _fromByteData(Uint8List data) {
   assert(tempImage != null);
 
   // check orientation
-  switch (tempImage?.exif.data[0x0112] ?? -1) {
+  /* switch (tempImage?.exif.data[0x0112] ?? -1) {
     case 3:
       return image.copyRotate(tempImage!, 180);
     case 6:
@@ -735,5 +735,6 @@ image.Image _fromByteData(Uint8List data) {
     case 8:
       return image.copyRotate(tempImage!, -90);
   }
+  */
   return tempImage!;
 }
